@@ -75,10 +75,10 @@ control 'batchDeliverServiceInstallationVerify' do
 		
 	end
 	
-	describe iis_app('/document-exchange', 'DYNAMIC') do
+	describe iis_app('/v1/dx-batch-delivery', 'DYNAMIC') do
 		it { should exist }
-		it { should have_physical_path('D:\NaviNet\ClinicalGateway') }
-		it { should have_application_pool('ClinicalGatewayAppPool') }
+		it { should have_physical_path('D:\NaviNet\Api\v1\DocumentExchangeBatchDeliveryService') }
+		it { should have_application_pool('DocumentExchangeBatchDeliveryAppPool') }
 		it { should have_protocol('http') }
 
 	end

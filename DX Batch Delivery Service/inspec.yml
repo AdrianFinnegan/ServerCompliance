@@ -1,10 +1,10 @@
-name: Verifies the Document Exchange Installation
+name: Verifies the Document Exchange Batch Delivery Service Installation
 title: DocX Install
 maintainer: NantHealth Inc
 copyright: NantHealth, Inc.
 license: Apache-2.0
 copyright_email: adrian.finnegan@nanthealth.com
-summary: Checks DocX components have been installed
+summary: Checks Batch Delivery Service has been deployed
 version: 1.0.0
 supports:
   - os-family: windows
