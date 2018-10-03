@@ -1,0 +1,10 @@
+name: Verifies the Document Exchange Installation
+title: DocX Install
+maintainer: NantHealth Inc
+copyright: NantHealth, Inc.
+license: Apache-2.0
+copyright_email: adrian.finnegan@nanthealth.com
+summary: Checks DocX components have been installed
+version: 1.0.0
+supports:
+  - os-family: windows
