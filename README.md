@@ -16,5 +16,10 @@ This suite relies on installation of InSpec. The latest version can be found her
 1. Download all of the files from the src directory
 2. Open a command prompt and execute 
 	`> inspec check`
-	(./Initial_Check.png)
+	(./images/Initial_Check.png)
 3. `> inspec exec .`
+
+## Auditing covered
+
+1. Clinical Data Service
+2. Document Exchange Batch Delivery Service
