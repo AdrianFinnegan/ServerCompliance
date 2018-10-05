@@ -14,21 +14,19 @@ control 'awsDevVMInstallationVerify' do
 	# Platform Checks
 	################################
 	
-	# Visual Studio 03, 2010, 2012, 2013, 2015, 2017
+	# Visual Studio 2010, 2015, 2017
 	# Cygwin
-	# Version of .Net
-	# IIS
+	# Version of .Net 1, 2 4
+	# IIS active
 	# NantHealth in Host file
-	# Home Directory changed to <user>
-	# Build Action command missing (see troubleshooting)
+	# Home Directory changed to <user> from DHaldankar
+	# Build Action command missing (see troubleshooting)**
 	# Federation Resource databaase value
 	# Update Registry values for dev-db-02 database
-	# MVC 4
+	# MVC 4 installed
 	# Time Zone should be Eastern Time Zone (see Troubleshooting)
 	# AL.exe Toolpath (see Troubleshooting)
 	# Allow anonymous authentication on IIS site (see Troubleshooting)
-	
-	
 
 	describe registry_key({
 	name: 'Visual Studio', 
