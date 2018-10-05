@@ -1,6 +1,8 @@
 # encoding: utf-8
 # copyright: 2018, Adrian Finnegan
 
+version = attribute('version', default: '0.1111.1', description: 'Expected version of application')
+
 control 'batchDeliverServiceInstallationVerify' do
 	impact 1.0
 	title 'Checks Batch Delivery Service installation'
@@ -17,6 +19,7 @@ control 'batchDeliverServiceInstallationVerify' do
 	####################################
 	# Clinical Data Service compliance
 	####################################
+	
 	
 	describe file('D:\NaviNet\Api\v1\DocumentExchangeBatchDeliveryService') do
 		it { should exist }
@@ -56,10 +59,10 @@ control 'batchDeliverServiceInstallationVerify' do
 	describe registry_key({
 	name: 'Clinical Data Service', 
 	hive: 'HKEY_LOCAL_MACHINE',
-	key: '\SOFTWARE\Wow6432Node\Navimedix\InstalledPackages\ClinicalDataService\Dynamic\0.1477.1'
+	key: '\SOFTWARE\Wow6432Node\Navimedix\InstalledPackages\ClinicalDataService\Dynamic\\'+version
 	}) do
 		its('InstallStatus') { should eq 'Success' }
-		its('Version') { should match /^0.1477.[0-9].[0-9]*$/ }
+		its('Version') { should match version }
 	end
 	
 	describe service('W3SVC') do
